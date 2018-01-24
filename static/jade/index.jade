@@ -1,0 +1,65 @@
+include blocks/blocks
+
+doctype html
+html
+	+head('Index page')
+	body
+		.content
+			h1.content__title Ты сегодня покормил кота?
+			.product
+				.product-item(data-selected='Печень утки разварная с артишоками.', data-disabled='Печалька, с фуа-гра закончился.')
+					img(src="./img/product.png").product-item__bg
+					img(src="./img/product-hover.png").product-item__bg.product-item__bg--hover
+					img(src="./img/product-selected.png").product-item__bg.product-item__bg--selected
+					img(src="./img/product-selected-hover.png").product-item__bg.product-item__bg--selected-hover
+					img(src="./img/product-disabled.png").product-item__bg.product-item__bg--disabled
+					.product-item__wrapper
+						.product-item__caption Сказочное заморское яство
+						.product-item__title Нямушка
+						.product-item__flavor с фуа-гра
+						ul.product-item__list
+							li.product-item__list-item 10 порций
+							li.product-item__list-item мышь в подарок
+						.product-item__weight
+							.product-item__weight-value 0,5
+							.product-item__weight-name кг
+					.product-item__desc Чего сидишь? Порадуй котэ,&nbsp;
+						a(href="#").product-item__desc-link.js-buy__link купи.
+				.product-item(data-selected='Головы щучьи с чесноком да свежайшая сёмгушка.', data-disabled='Печалька, с рыбой закончился.')
+					img(src="./img/product.png").product-item__bg
+					img(src="./img/product-hover.png").product-item__bg.product-item__bg--hover
+					img(src="./img/product-selected.png").product-item__bg.product-item__bg--selected
+					img(src="./img/product-selected-hover.png").product-item__bg.product-item__bg--selected-hover
+					img(src="./img/product-disabled.png").product-item__bg.product-item__bg--disabled
+					.product-item__wrapper
+						.product-item__caption Сказочное заморское яство
+						.product-item__title Нямушка
+						.product-item__flavor с рыбой
+						ul.product-item__list
+							li.product-item__list-item 40 порций
+							li.product-item__list-item 2 мыши в подарок
+						.product-item__weight
+							.product-item__weight-value 2
+							.product-item__weight-name кг
+					.product-item__desc Чего сидишь? Порадуй котэ,&nbsp;
+						a(href="#").product-item__desc-link.js-buy__link купи.
+				.product-item.disabled(data-selected='Филе из цыплят с трюфелями в бульоне.', data-disabled='Печалька, с курой закончился.')
+					img(src="./img/product.png").product-item__bg
+					img(src="./img/product-hover.png").product-item__bg.product-item__bg--hover
+					img(src="./img/product-selected.png").product-item__bg.product-item__bg--selected
+					img(src="./img/product-selected-hover.png").product-item__bg.product-item__bg--selected-hover
+					img(src="./img/product-disabled.png").product-item__bg.product-item__bg--disabled
+					.product-item__wrapper
+						.product-item__caption Сказочное заморское яство
+						.product-item__title Нямушка
+						.product-item__flavor с курой
+						ul.product-item__list
+							li.product-item__list-item 100 порций
+							li.product-item__list-item 5 мышей в подарок
+							li.product-item__list-item заказчик доволен
+						.product-item__weight
+							.product-item__weight-value 5
+							.product-item__weight-name кг
+					.product-item__desc Чего сидишь? Порадуй котэ, &nbsp;
+						a(href="#").product-item__desc-link.js-buy__link купи.
+		+script
