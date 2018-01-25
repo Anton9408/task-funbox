@@ -24,7 +24,7 @@ gulp.task('server', ['sass', 'js', 'jade-concat', 'img', 'fonts', 'video'], func
 gulp.task('sass', function() {
     return gulp.src("static/scss/styles.scss")
         .pipe(sass({errLogToConsole: true}))
-        .pipe(prefixer({ browsers: ['> 1%', 'IE 8'] }))
+        .pipe(prefixer({ browsers: ['> 0.5%', 'IE 11'] }))
         .pipe(gulp.dest("public/css/"))
         .pipe(browserSync.stream());
 });

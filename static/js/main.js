@@ -16,7 +16,6 @@ $(document).ready(function () {
 	});
 
 	product.mouseleave(function () {
-		console.log('test');
 		if($(this).hasClass('selected')) {
 			$(this).addClass('selected-hover');
 		}
@@ -27,6 +26,10 @@ $(document).ready(function () {
 			if($(this).hasClass('disabled')) {
 				$(this).find('.product-item__desc').text($(this).data('disabled'));
 			}
+		});
+
+		$('.js-buy__link').click(function (event) {
+			event.preventDefault();
 		});
 
 });
